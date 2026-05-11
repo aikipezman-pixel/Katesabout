@@ -461,98 +461,274 @@
       border-top: 1px solid rgba(241, 237, 233, 0.08);
     }
 
-    @media (max-width: 900px) {
-      .site-header {
-        position: relative;
-        flex-direction: column;
-        gap: 1.2rem;
-      }
+    /* ================================
+   TABLET / SMALL LAPTOP
+   768px and below
+================================ */
 
-      .main-nav {
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 1rem 1.4rem;
-      }
+@media (max-width: 768px) {
+  .site-header {
+    position: relative;
+    height: auto;
+    min-height: 96px;
+    padding: 1rem 6%;
+    flex-direction: column;
+    justify-content: center;
+    gap: 0.85rem;
+  }
 
-      .about-hero {
-        padding-top: 5rem;
-      }
-
-      .story-grid,
-      .pillars-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .pillar {
-        border-right: none;
-        border-bottom: 1px solid rgba(199, 169, 118, 0.34);
-      }
-
-      .pillar:last-child {
-        border-bottom: none;
-      }
-    }
-
-    @media (max-width: 768px) {
-      .site-header,
-      .about-hero,
-      .story-section,
-      .cv-section,
-      .pillars-section,
-      .closing-section,
-      .site-footer {
-        padding-left: 6%;
-        padding-right: 6%;
-      }
-
-      .logo {
-        font-size: 1.25rem;
-      }
-
-      .main-nav {
-        font-size: 0.62rem;
-        letter-spacing: 0.24em;
-      }
-
-      .about-hero {
-        min-height: 52vh;
-        padding-top: 4rem;
-        padding-bottom: 4rem;
-      }
-
-      .story-section {
-        padding-top: 3.6rem;
-      }
-
-      .story-grid {
-        gap: 2.4rem;
-      }
-
-      .cv-box {
-        padding: 2.2rem 1.25rem;
-      }
-
-      .cv-box::before,
-      .cv-box::after {
-        display: none;
-      }
-
-      .cv-button,
-      .button-link {
-        width: 100%;
-        max-width: 315px;
-      }
-
-      .closing-links {
-        flex-direction: column;
-        align-items: center;
-        gap: 1rem;
-      }
-    }
-
-    @media (max-width: 768px) {
   .logo {
-    height: 28px;
+    position: relative;
+    left: auto;
+    top: auto;
+    transform: none;
+    width: 220px;
+    margin: 0 auto;
+  }
+
+  .main-nav {
+    width: 100%;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 0.75rem 1.2rem;
+    font-size: 0.62rem;
+    letter-spacing: 0.22em;
+  }
+
+  .main-nav a {
+    padding-bottom: 0.3rem;
+  }
+
+  .about-hero {
+    min-height: 54vh;
+    padding: 4.5rem 6%;
+    align-items: center;
+    background-position: center;
+  }
+
+  .hero-inner {
+    padding-left: 0;
+    max-width: 100%;
+  }
+
+  .about-hero h1 {
+    font-size: clamp(3.8rem, 14vw, 5.8rem);
+    line-height: 0.92;
+    margin-bottom: 1.5rem;
+  }
+
+  .hero-intro {
+    font-size: 1.05rem;
+    line-height: 1.55;
+    max-width: 430px;
+  }
+
+  .story-section {
+    padding: 4rem 6% 2rem;
+  }
+
+  .story-grid {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+
+  .portrait-frame {
+    max-width: 480px;
+    margin: 0 auto;
+  }
+
+  .story-copy p {
+    font-size: 1rem;
+    line-height: 1.75;
+  }
+
+  .story-copy p:first-child::first-letter {
+    font-size: 4.2rem;
+  }
+
+  .cv-section {
+    padding: 2.5rem 6%;
+  }
+
+  .cv-box {
+    padding: 2.25rem 1.5rem;
+  }
+
+  .cv-box::before,
+  .cv-box::after {
+    display: none;
+  }
+
+  .cv-label,
+  .section-label {
+    letter-spacing: 0.28em;
+  }
+
+  .cv-button {
+    width: 100%;
+    max-width: 315px;
+    min-width: 0;
+  }
+
+  .pillars-section {
+    padding: 2rem 6% 3.5rem;
+  }
+
+  .pillars-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .pillar {
+    border-right: none;
+    border-bottom: 1px solid rgba(199, 169, 118, 0.34);
+    padding: 2.25rem 1.25rem;
+  }
+
+  .pillar:last-child {
+    border-bottom: none;
+  }
+
+  .closing-section {
+    padding: 3.25rem 6%;
+  }
+
+  .closing-links {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .button-link {
+    width: 100%;
+    max-width: 315px;
+  }
+
+  .site-footer {
+    padding: 1.25rem 6%;
+    font-size: 0.85rem;
   }
 }
- 
+
+
+/* ================================
+   PHONE
+   640px and below
+================================ */
+
+@media (max-width: 640px) {
+  .site-header {
+    min-height: auto;
+    padding: 0.9rem 5%;
+    gap: 0.75rem;
+  }
+
+  .logo {
+    width: 190px;
+  }
+
+  .main-nav {
+    gap: 0.65rem 0.95rem;
+    font-size: 0.58rem;
+    letter-spacing: 0.18em;
+  }
+
+  .about-hero {
+    min-height: 50vh;
+    padding: 3.75rem 5%;
+    background-position: center;
+  }
+
+  .about-hero h1 {
+    font-size: clamp(3.2rem, 17vw, 4.8rem);
+    line-height: 0.9;
+  }
+
+  .hero-intro {
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+
+  .story-section {
+    padding: 3.25rem 5% 1.75rem;
+  }
+
+  .story-grid {
+    gap: 2rem;
+  }
+
+  .portrait-frame img {
+    aspect-ratio: 4 / 5;
+  }
+
+  .story-copy p {
+    font-size: 0.98rem;
+    line-height: 1.7;
+  }
+
+  .story-copy p:first-child::first-letter {
+    font-size: 3.6rem;
+  }
+
+  .cv-section {
+    padding: 2rem 5%;
+  }
+
+  .cv-box {
+    padding: 2rem 1.1rem;
+  }
+
+  .cv-box h2 {
+    font-size: 2rem;
+    line-height: 1.05;
+  }
+
+  .cv-box p:not(.cv-label) {
+    font-size: 0.95rem;
+  }
+
+  .cv-button {
+    font-size: 0.65rem;
+    letter-spacing: 0.22em;
+    padding: 0.9rem 1rem;
+  }
+
+  .pillars-section {
+    padding: 1.5rem 5% 3rem;
+  }
+
+  .pillar {
+    padding: 2rem 0.75rem;
+  }
+
+  .pillar h3 {
+    font-size: 1.9rem;
+  }
+
+  .pillar p {
+    font-size: 0.95rem;
+  }
+
+  .text-link {
+    font-size: 0.62rem;
+    letter-spacing: 0.24em;
+  }
+
+  .closing-section {
+    padding: 3rem 5%;
+  }
+
+  .closing-section h2 {
+    font-size: 2rem;
+  }
+
+  .button-link {
+    font-size: 0.65rem;
+    letter-spacing: 0.24em;
+    padding: 0.9rem 1rem;
+  }
+
+  .site-footer {
+    font-size: 0.8rem;
+    line-height: 1.5;
+  }
+}
